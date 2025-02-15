@@ -34,12 +34,10 @@
 
         </div>
 
-        <div class="row">
+    </div>
+        <div class="col-md-12">
             <x-footer/>
         </div>
-
-    </div>
-
 
 </div>
 
