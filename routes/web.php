@@ -45,6 +45,7 @@ Route::get('/contact', function () {
 })->name('contact');
 
 
+
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);
 
@@ -61,3 +62,7 @@ Route::get('/{brand_id}/{brand_slug}/{manual_id}/', [ManualController::class, 's
 
 // Generate sitemaps
 Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
+
+Route::get('/{brand}', [BrandController::class, 'edit'])->name('brands.edit');
+Route::post('/{brand}', [BrandController::class, 'update'])->name('brands.update');
+Route::delete('/{brand}', [BrandController::class, 'destroy'])->name('brands.destroy');

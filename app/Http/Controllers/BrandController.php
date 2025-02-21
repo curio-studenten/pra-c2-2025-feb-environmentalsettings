@@ -20,4 +20,20 @@ class BrandController extends Controller
         ]);
 
     }
+    public function edit(Brand $brand) {
+        return view('manual_list{brand}')->with('brand', $brand);}
+
+        public function update(Request $request, Brand $brand) {
+            $brand->name = $request->name;
+            $brand->categorie = $request->categorie;
+            $brand->save();
+
+            return redirect()->route('index');
+
+        }
+
+        public function destroy(Brand $brand){
+            $brand->delete();
+            return redirect()->route('index');
+        }
 }
