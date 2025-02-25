@@ -10030,3 +10030,45 @@ a.text-dark:hover, a.text-dark:focus {
 footer{
     background-color: #e9ecef;
 }
+
+
+.manuallist
+{
+    background-color: #e9ecef;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.manualitem{
+padding: 10px;
+margin: 10px;
+border-radius: 5px;
+text-align: center;
+background-color: #d6d8db;
+}
+
+
+
+.manuals-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.manuals-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.manual-item {
+    padding: 10px;
+    text-align: center;
+    color: #3490dc;
+}
+.manuallistcontainer{
+    background-color: #e9ecef;
+    padding-top: 10px;
+}

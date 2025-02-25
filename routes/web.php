@@ -44,7 +44,7 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
-
+Route::get('/manual/redirect/{manual_id}', [ManualController::class, 'countViews'])->name('manuals.countviews');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);
