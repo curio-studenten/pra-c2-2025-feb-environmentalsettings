@@ -1,7 +1,10 @@
 
 <footer>
 	© {{ __('misc.copyright') }}
-    <a href="contact">Contact Us!</a>
+    <a href="contact"> Contact Us!</a>
+    <a href="Instagram"> Instagram: 4s-Guides</a>
+    <a href="Email"> Email: 4sguides@gmail.com</a>
+    <a href="Twitter"> Twitter: 4s-Guides</a>
 </footer>
 
 

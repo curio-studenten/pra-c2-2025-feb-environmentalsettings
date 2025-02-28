@@ -26,6 +26,8 @@ Productcat:		/category/12/Computers/
 */
 
 use App\Models\Brand;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\TypeController;
@@ -40,9 +42,16 @@ Route::get('/', function () {
     return view('pages.homepage', compact('brands'));
 })->name('home');
 
+Route::get('/', [HomeController::class, 'index']);
+//Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/', [HomeController::class, 'index'])->name('manual.index');
+
+
 Route::get('/contact', function () {
     return view('pages.contact');
-})->name('contact');
+});
+
+
 
 Route::get('/manual/redirect/{manual_id}', [ManualController::class, 'countViews'])->name('manuals.countviews');
 

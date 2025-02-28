@@ -10029,6 +10029,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 footer{
     background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -10072,3 +10075,4 @@ background-color: #d6d8db;
     background-color: #e9ecef;
     padding-top: 10px;
 }
+

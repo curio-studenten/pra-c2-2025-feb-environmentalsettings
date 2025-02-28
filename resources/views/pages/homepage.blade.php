@@ -12,6 +12,20 @@
         </x-slot:title>
     </h1>
 
+    <p>Hallo, {{ $naam }}!</p>
+
+    <div class="manuallistcontainer">
+    <h3 class="manuals-title">Top 10 Most Viewed Manuals</h3>
+
+    <ol class="manuals-list">
+        @foreach ($manuals as $manual)
+            <li class="manual-item">
+                <h6 class="manual-name">{{ $manual->name }}</h6>
+                <p class="manual-views">Views: {{ $manual->views_count }}</p>
+            </li>
+        @endforeach
+    </ol>
+
 
     <?php
     $size = count($brands);
